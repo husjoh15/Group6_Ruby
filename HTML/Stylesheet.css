@@ -1,0 +1,9 @@
+body{
+	max-width: 1300px;
+	margin: auto;
+}
+
+#wrapper-div{
+	width: 1300px;
+	background-color: rgb(26, 65, 89);
+}
