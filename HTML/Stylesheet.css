@@ -7,3 +7,11 @@ body{
 	width: 1300px;
 	background-color: rgb(26, 65, 89);
 }
+
+#usr{
+	width: 300px;
+}
+
+#pwd{
+	width: 300px;
+}
