@@ -1,5 +1,6 @@
 body{
 	max-width: 1300px;
+	height: 1045px;
 	margin: auto;
 	background-color: rgb(24, 67, 95);
 }
@@ -28,23 +29,38 @@ body{
 	position: relative;
 	overflow: auto;
 	background-color: rgb(24, 67, 95);
-	width: 700px;
+	/*width: 700px;*/
+	width: relative;
 	height: 980px;
 	left: 270px;
 	bottom: 1027px;
 }
 
+#gamebox-wrapper::-webkit-scrollbar{
+	display: none;
+}
+
 #gamebox-div{
 	position: relative;
+	border-bottom: 20px solid rgb(24, 67, 95);
 	min-height: 150px;
 	left: 20px;
 	width: 650px;
 	height: relative;
 	background-color: rgb(30, 50, 66);
+	overflow: hidden;
 }
 
 #gamebox-div:hover{
 	background-color: rgb(159, 197, 219);
+	width: 900px;
+	-webkit-transition: width 0.8s;
+}
+
+#gamebox-btn{
+	position: absolute;
+	left: 720px;
+	top: 45px;
 }
 
 #searchbar{
