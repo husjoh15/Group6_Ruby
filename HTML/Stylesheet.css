@@ -1,11 +1,65 @@
 body{
 	max-width: 1300px;
 	margin: auto;
+	background-color: rgb(24, 67, 95);
+}
+
+.navbar{
+	margin-bottom: 0px;
 }
 
 #wrapper-div{
 	width: 1300px;
-	background-color: rgb(26, 65, 89);
+	height: 1104px;
+	/*background-color: rgb(26, 65, 89);*/
+}
+
+#sidebar-div{
+	position: relative;
+	bottom: 47px;
+	width: 250px;
+	height: 1045px;
+	border-bottom-left-radius: 25px;
+	background-color: lightblue;
+	opacity: 0.5;
+}
+
+#gamebox-wrapper{
+	position: relative;
+	overflow: auto;
+	background-color: rgb(24, 67, 95);
+	width: 700px;
+	height: 980px;
+	left: 270px;
+	bottom: 1027px;
+}
+
+#gamebox-div{
+	position: relative;
+	left: 20px;
+	width: 650px;
+	height: 150px;
+	background-color: rgb(30, 50, 66);
+}
+
+#gamebox-div:hover{
+	background-color: rgb(159, 197, 219);
+}
+
+#searchbar{
+	position: relative;
+    width: 650px;
+    top: 30px;
+    left: 290px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+#gamebox-text{
+	color: white;
 }
 
 #usr{
