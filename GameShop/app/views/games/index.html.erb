@@ -2,24 +2,24 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Image url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
+      <tr>
+        <th>Image url</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
   </thead>
 
   <tbody>
     <% @games.each do |game| %>
       <tr>
+        <td><%= image_tag game.image_url %></td>
         <td><%= game.name %></td>
         <td><%= game.description %></td>
         <td><%= game.price %></td>
-        <td><%= game.image_url %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
