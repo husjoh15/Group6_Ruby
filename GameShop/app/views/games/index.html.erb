@@ -10,7 +10,6 @@
   <title>GameShop</title>
 </head>
 
-<<<<<<< HEAD
 <body id="body">
   <div id="wrapper-div">
     <nav class="navbar navbar-inverse">
@@ -27,9 +26,6 @@
           <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
           <li><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
-=======
-<%= link_to "Your Cart", :controller => :cart, :action => :index %>
->>>>>>> 1236422eb38535b02907929b7410d9736463c4cc
 
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
@@ -63,31 +59,10 @@
               </div>
             </div>
 
-<<<<<<< HEAD
+
           </div>
         </div>
-=======
-  <tbody>
 
-    <% @games.each do |game| %>
-      <div class="background">
-      <tr>
-        <td><%= image_tag game.image_url %></td>
-        <td>
-        <div class="name"><%= game.name %></div>
-        <div class="description"><%= game.description %></div>
-        <div class="linkShow"><%= link_to 'Show', game %></div>
-        <div class="linkEdit"><%= link_to 'Edit', edit_game_path(game) %></div>
-        <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-          <%= button_to "Add to cart", :controller => :cart, :action => :add, :id => game %>
-        <td>
-          <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
-        </td>
-
-        </td>
-      </tr>
->>>>>>> 1236422eb38535b02907929b7410d9736463c4cc
-      </div>
     </nav>
 
     <form>
