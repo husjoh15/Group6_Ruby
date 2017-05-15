@@ -1,15 +1,103 @@
-tbody{
-    background-color: #666666;
+
+.description{
+    color: white;
 }
 
-.name{
-    font-size: 24pt;
+.price{
+    color: white;
+    font-size: 16pt;
+    text-align: right;
+    margin-left: 50pt;
+}
+
+#body{
+    max-width: 1300px;
+    height: 1045px;
+    margin: auto;
+    background-color: rgb(24, 67, 95);
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+#wrapper-div{
+    width: 1300px;
+    height: 1104px;
+    /*background-color: rgb(26, 65, 89);*/
+}
+
+#sidebar-div{
+    position: relative;
+    bottom: 47px;
+    width: 250px;
+    height: 1045px;
+    border-bottom-left-radius: 25px;
+    background-color: lightblue;
+    opacity: 0.5;
+}
+
+#gamebox-wrapper{
+    position: relative;
+    overflow: auto;
+    background-color: rgb(24, 67, 95);
+    /*width: 700px;*/
+    width: relative;
+    height: 980px;
+    left: 270px;
+    bottom: 1027px;
+}
+
+#gamebox-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+#gamebox-div{
+    position: relative;
+    /*border-bottom: 20px solid rgb(24, 67, 95);*/
+    min-height: 150px;
+    left: 20px;
+    width: 650px;
+    height: relative;
+    background-color: rgb(30, 50, 66);
+    overflow: hidden;
+}
+
+#gamebox-div:hover{
+    background-color: rgb(159, 197, 219);
+    width: 900px;
+    -webkit-transition: width 0.8s;
+}
+
+#gamebox-btn{
+    position: absolute;
+    left: 720px;
+    top: 45px;
+}
+
+#searchbar{
+    position: relative;
+    width: 650px;
+    top: 30px;
+    left: 290px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+#gamebox-text{
+    color: white;
+    font-size: 20pt;
     font-weight: bold;
     margin-bottom: 26px;
 }
 
-.price{
-    font-size: 16pt;
-    text-align: right;
-    margin-left: 50pt;
+#usr{
+    width: 300px;
+}
+
+#pwd{
+    width: 300px;
 }

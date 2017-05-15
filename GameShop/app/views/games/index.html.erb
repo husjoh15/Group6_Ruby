@@ -1,36 +1,119 @@
-<link rel="stylesheet" type="text/css" href="Overview.css">
 
-<h1>Games</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet2" href="Stylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="Overview.css">
+  <title>GameShop</title>
+</head>
 
+<body id="body">
+  <div id="wrapper-div">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="Main_page.html">GameShop</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="Main_page.html">Home</a></li>
+          <li class="dropdown"><a href="Browse_Page.html">Browse</a></li>
+          <li><a href="#">Page 2</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+          <li><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
 
-<table>
-  <thead>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
 
-  </thead>
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <h2>Form control: input</h2>
+                  <p>The form below contains two input elements; one of type text and one of type password:</p>
+                  <form>
+                    <div class="form-group">
+                      <label for="usr">Name:</label>
+                      <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" id="pwd">
+                    </div>
+                  </form>
+                </div>
+                <p>Some text in the modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
 
-  <tbody>
-
-    <% @games.each do |game| %>
-      <div class="background">
-      <tr>
-        <td><%= image_tag game.image_url %></td>
-        <td>
-        <div class="name"><%= game.name %></div>
-        <div class="description"><%= game.description %></div>
-        <div class="linkShow"><%= link_to 'Show', game %></div>
-        <div class="linkEdit"><%= link_to 'Edit', edit_game_path(game) %></div>
-        <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        <td>
-          <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
-        </td>
-        </td>
-      </tr>
+          </div>
+        </div>
       </div>
-    <% end %>
+    </nav>
 
-  </tbody>
-</table>
+    <form>
+
+      <input id="searchbar" type="text" name="search" placeholder="Search games..">
+
+    </form>
+
+    <div id="sidebar-div">
+
+      <h1>Hello</h1>
+
+    </div>
+
+    <div id="gamebox-wrapper">
+
+
+      <table id="gamebox-div">
+        <thead>
+
+        </thead>
+
+        <tbody>
+
+        <% @games.each do |game| %>
+            <div class="gamebox-div">
+              <tr>
+                <td><%= image_tag game.image_url %></td>
+                <td>
+                  <div id="gamebox-text"><%= game.name %></div>
+                  <div class="description"><%= game.description %></div>
+                  <div class="linkShow"><%= link_to 'Show', game %></div>
+                  <div class="linkEdit"><%= link_to 'Edit', edit_game_path(game) %></div>
+                  <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                  <td>
+                    <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
+                  </td>
+                </td>
+              </tr>
+            </div>
+        <% end %>
+
+        </tbody>
+      </table>
+
+      <br>
+      <%= link_to 'New Game', new_game_path %>
+
+    </div>
+  </div>
+</body>
+
 
 <br>
 
-<%= link_to 'New Game', new_game_path %>
