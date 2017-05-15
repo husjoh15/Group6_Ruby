@@ -1,15 +1,20 @@
 GameShop::Application.routes.draw do
-  #get "cart/index"
-  #get "cart/add"
+  get "cart/index"
+  get "cart/add"
   resources :games
 
-  #match ":controller/:action/:id"
+  get ':controller/:action/:id', :to => 'games#index'
 
+  resources :cart do
+    collection do
+      post 'add'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root :to => 'games#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

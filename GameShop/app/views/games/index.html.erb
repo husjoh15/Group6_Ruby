@@ -2,6 +2,7 @@
 
 <h1>Games</h1>
 
+<%= link_to "Your Cart", :controller => :cart, :action => :index %>
 
 <table>
   <thead>
@@ -20,9 +21,11 @@
         <div class="linkShow"><%= link_to 'Show', game %></div>
         <div class="linkEdit"><%= link_to 'Edit', edit_game_path(game) %></div>
         <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <%= button_to "Add to cart", :controller => :cart, :action => :add, :id => game %>
         <td>
           <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
         </td>
+
         </td>
       </tr>
       </div>
