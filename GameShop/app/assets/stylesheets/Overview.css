@@ -1,0 +1,15 @@
+tbody{
+    background-color: #666666;
+}
+
+.name{
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+
+.price{
+    font-size: 16pt;
+    text-align: right;
+    margin-left: 50pt;
+}
