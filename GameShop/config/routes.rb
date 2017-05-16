@@ -1,6 +1,6 @@
 GameShop::Application.routes.draw do
- # get "cart/index"
-  #get "cart/add"
+  get "cart/index"
+  get "cart/add"
   resources :games
 
   root :to => "games#index"
