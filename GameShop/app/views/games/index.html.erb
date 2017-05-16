@@ -59,10 +59,9 @@
               </div>
             </div>
 
-
           </div>
         </div>
-
+      </div>
     </nav>
 
     <form>
@@ -87,23 +86,23 @@
 
         <tbody>
 
-        <% @games.each do |game| %>
+          <% @games.each do |game| %>
             <div class="gamebox-div">
-              <tr>
-                <td><%= image_tag game.image_url %></td>
-                <td>
-                  <div id="gamebox-text"><%= game.name %></div>
-                  <div class="description"><%= game.description %></div>
-                  <div class="linkShow"><%= link_to 'Show', game %></div>
-                  <div class="linkEdit"><%= link_to 'Edit', edit_game_path(game) %></div>
-                  <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                <tr>
+                  <td><%= image_tag game.image_url %></td>
                   <td>
-                    <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
+                    <div id="gamebox-text"><%= game.name %></div>
+                    <div class="description"><%= game.description %></div>
+                    <div class="linkShow"><%= link_to 'Show', game %></div>
+                    <div class="linkEdit"><%= link_to 'Edit', edit_game_path(game) %></div>
+                    <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                    <td>
+                      <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
+                    </td>
                   </td>
-                </td>
-              </tr>
+                </tr>
             </div>
-        <% end %>
+          <% end %>
 
         </tbody>
       </table>

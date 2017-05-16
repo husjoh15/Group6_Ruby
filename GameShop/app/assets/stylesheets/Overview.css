@@ -65,8 +65,9 @@
 
 #gamebox-div:hover{
     background-color: rgb(159, 197, 219);
-    width: 900px;
-    -webkit-transition: width 0.8s;
+    cursor: pointer;
+    /*width: 900px;
+    -webkit-transition: width 0.8s;*/
 }
 
 #gamebox-btn{
@@ -92,6 +93,34 @@
     font-size: 20pt;
     font-weight: bold;
     margin-bottom: 26px;
+}
+
+#showgame-box{
+    background-color: white;
+    margin: auto;
+    height: relative;
+    left: 300px;
+}
+
+#showgame-name{
+    color: black;
+    position: relative;
+    text-align: center;
+    font-size: 34pt;
+}
+
+#showgame-picture{
+    position: relative;
+    left: 130px;
+    float: left;
+}
+
+#showgame-description{
+    position: relative;
+    color: black;
+    width: 500px;
+    left: 300px;
+    font-size: 12pt;
 }
 
 #usr{
