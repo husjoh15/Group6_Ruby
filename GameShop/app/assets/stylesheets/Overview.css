@@ -64,9 +64,9 @@
 }
 
 #gamebox-div:hover{
+    /*width: 900px;
     background-color: rgb(159, 197, 219);
     cursor: pointer;
-    /*width: 900px;
     -webkit-transition: width 0.8s;*/
 }
 
@@ -121,6 +121,12 @@
     width: 500px;
     left: 300px;
     font-size: 12pt;
+}
+
+.btn-success{
+    position: relative;
+    margin: 10px;
+    left:50px;
 }
 
 #usr{
