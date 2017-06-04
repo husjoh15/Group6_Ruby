@@ -19,7 +19,7 @@ We have a rating functionality, where users can rate a game from 1 to 5 stars. T
 Individual Contribution:
 
 	Jibblol - Vegard Ingebrigtsen: "I have mainly been working on the html/css side of this application, whilst also helping out with ruby code.
-	I have also deployed the applicaton to heroku."
+	I have also deployed the applicaton to heroku. And I ended up having to generate a new docker-file."
 
 	Husmas15 - Mashal Hussain: "My first assignment was to get Docker working, but that started off as a nightmare and it kept me busy for a whole week without progress.
 	Besides that I have helped around with debugging."
