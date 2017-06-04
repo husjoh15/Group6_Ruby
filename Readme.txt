@@ -5,15 +5,14 @@ Link to application(Heroku):
 https://sleepy-reef-97727.herokuapp.com/
 
 Special instruction on how to run the application:
-Pretty straight forward application. You can add games to the cart, make a new user and you can login. After you have logged in you get the ability to add new games.
+No special info.
 
 Login info:
-You can make yourself a user and login. You will have a few new rights when you are logged in, such as edit and destroy games from the database. Anyone can make new users.
+Make an own user on the site. You will have to rights to add, edit and destroy a game. 
 
 Description of the project:
-We have made an online gameshop with we have a basic cart function. You can add and remove items from the cart.
-There is a login, where we have used the devise gem. (There is two types of users, admin and user. Admins can add, edit and remove, items from the database.
-We have a rating functionality, where users can rate a game from 1 to 5 stars. This is the ajaxful_rating gem
+We have made an online gameshop with a basic cart function. You can add items to the cart and you will get the total price of a game, and total price for all games.
+There is a login, where we have used the devise gem. If you are not logged in, you can not add, edit or destroy a game. If you try that, you will be redirected to the log in page. When you log in, you can do those things. 
 
 
 Individual Contribution:
@@ -24,5 +23,8 @@ Individual Contribution:
 	Husmas15 - Mashal Hussain: "My first assignment was to get Docker working, but that started off as a nightmare and it kept me busy for a whole week without progress.
 	Besides that I have helped around with debugging."
 
+	HusJoh15 - Johannes Husa "I was the leader in the group, and tried to split the assignments to the others in the group. I made the database to the games and changed some html and css so it looks better. I made the Cart function, so you can add games to it. I made the log in and all log in functionality with the devise gem. My work is done through Vegards git, thats why there is none commits from me"
+
 
 Other relevant information:
+We had alot of problems with docker and this really stopped us for doing what we wanted to. We wanted to add user ratings to every game, but we did not have time. In the end it was kind of working, but not completly. So all coding from Johannes has been sent to Vegard, that's why basicly all git commits are from Vegard. It was also hard to get everyone to meet on the same day, because we had differnt plan through the week.
