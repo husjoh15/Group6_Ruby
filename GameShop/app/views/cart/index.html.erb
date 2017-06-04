@@ -36,6 +36,26 @@
       </div>
     </nav>
 
+    <h1> Your Cart</h1>
+    <table>
+      <% @cart.each do |id, quantity| %>
+          <% games = Game.find(id) %>
+          <tr>
+            <td><%= games.name %></td>
+          </tr>
+      <% end %>
+    </table>
+    <table>
+      <% @cart.each do |id, quantity| %>
+          <% games = Game.find(id) %>
+          <tr>
+            <td><% image_tag item.image_url, :width => 80 %></td>
+            <td><%= games.name %></td>
+            <td width="80"><%= quantity %></td>
+          </tr>
+      <% end %>
+    </table>
+
   </div>
 
 </body>
