@@ -17,16 +17,21 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="Main_page.html">GameShop</a>
+          <a class="navbar-brand">GameShop</a>
         </div>
         <ul class="nav navbar-nav">
           <li><%= link_to 'Home', games_path %></li>
-          <li class="dropdown"><a href="Browse_Page.html">Browse</a></li>
-          <li><a href="#">Page 2</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><%= link_to 'Shopping cart', cart_index_path %></li>
-          <li><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+          <% if user_signed_in? %>
+              <li><%= link_to 'Shopping cart', cart_index_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path,method: :delete %></li>
+          <% else %>
+              <li><%= link_to 'Shopping cart', cart_index_path %></li>
+              <li><%= link_to 'Login', new_user_session_path %></li>
+          <% end %>
+
         </ul>
       </div>
     </nav>

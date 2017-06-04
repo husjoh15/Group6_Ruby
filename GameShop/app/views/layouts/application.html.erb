@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<% if notice %><div class="alter alert-info"><%= notice %></div><% end %>
+<% if alert %><div class="alter alert-warning"><%= alert %></div><% end %>
+
 <%= yield %>
 
 </body>
