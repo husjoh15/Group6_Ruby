@@ -18,6 +18,9 @@ We have a rating functionality, where users can rate a game from 1 to 5 stars. T
 
 Individual Contribution:
 
+	Jibblol - Vegard Ingebrigtsen: "I have mainly been working on the html/css side of this application, whilst also helping out with ruby code.
+	I have also deployed the applicaton to heroku."
+
 
 
 Other relevant information:
