@@ -36,24 +36,24 @@
       </div>
     </nav>
 
-    <h1> Your Cart</h1>
+    <h1 class="tabledata"> Your Cart</h1>
+    <% sum = 0 %>
     <table>
       <% @cart.each do |id, quantity| %>
-          <% games = Game.find(id) %>
+          <% game = Game.find(id) %>
           <tr>
-            <td><%= games.name %></td>
+            <td><%= image_tag game.image_url, :width => 80 %></td>
+            <td class="tabledata" width="250"><%= game.name %></td>
+            <td class="tabledata" width="120"><%= quantity %></td>
+            <td class="tabledata" width="120"><%= number_to_currency game.price, :unit => "kr" %></td>
+            <td class="tabledata" width="120"><%= number_to_currency game.price * quantity, :unit => "kr" %></td>
           </tr>
+            <% sum += quantity * game.price %><
       <% end %>
-    </table>
-    <table>
-      <% @cart.each do |id, quantity| %>
-          <% games = Game.find(id) %>
-          <tr>
-            <td><% image_tag item.image_url, :width => 80 %></td>
-            <td><%= games.name %></td>
-            <td width="80"><%= quantity %></td>
-          </tr>
-      <% end %>
+      <tr>
+        <td class="tabledata" colspan="4"> Total:</td>
+        <td class="tabledata"><%= number_to_currency sum, :unit => "kr" %></td>
+      </tr>
     </table>
 
   </div>

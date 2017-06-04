@@ -69,8 +69,7 @@
                     <div class="linkDestroy"><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     <td>
                       <div class="price"><%= number_to_currency game.price, :unit => "kr" %></div>
-
-                      <%= link_to 'Add to cart', cart_index_path, :class => "btn btn-success" %>
+                      <%= link_to 'Add to cart', :controller =>  :cart, :action => :add, :id => game, :class => "btn btn-success" %>
 
                     </td>
                   </td>
