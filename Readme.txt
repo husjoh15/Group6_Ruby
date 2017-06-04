@@ -21,6 +21,8 @@ Individual Contribution:
 	Jibblol - Vegard Ingebrigtsen: "I have mainly been working on the html/css side of this application, whilst also helping out with ruby code.
 	I have also deployed the applicaton to heroku."
 
+	Husmas15 - Mashal Hussain: "My first assignment was to get Docker working, but that started off as a nightmare and it kept me busy for a whole week without progress.
+	Besides that I have helped around with debugging."
 
 
 Other relevant information:
